@@ -16,3 +16,4 @@ streamlit-cropper==0.1.3
 opencv-python==4.5.4.60
 statsmodels==0.12.2
 plotly==5.10.0
+gsheetsdb==0.1.13.1
