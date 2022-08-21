@@ -26,6 +26,7 @@ def show_predict_page():
                   'RICHMOND'
     )
 
+    country = st.selectbox("Police Districts", PdDistrict)
 
     if ok:
         st.subheader(PdDistrict)
