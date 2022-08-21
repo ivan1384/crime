@@ -30,13 +30,13 @@ def show_alarm_page():
     Pdoptions = list(range(len(PdDistrict)))
     value = st.selectbox("PdDistrict", Pdoptions, format_func=lambda x: PdDistrict[x])
 
-    date= st.date_input("When's the crime",datetime.date(2019, 7, 6))
+    crimed= st.date_input("When's the crime",datetime.date(2019, 7, 6))
     
     ok = st.button("Predict Alarm")
     if ok:
-        day=date.datetime.day
-        month=date.datetime.month 
-        year=date.datetime.year 
+        day=crimed.datetime.day
+        month=crimed.datetime.month 
+        year=crimed.datetime.year 
         st.write(day)
         st.write(month)
         st.write(year)
