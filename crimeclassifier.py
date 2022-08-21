@@ -14,7 +14,7 @@ rf = pic["model"]
 
 
 def show_classifier_page():
-    st.title("Crime Alarm For each police District")
+    st.title("Crime Classifier for most probable property crime or drug user/dealer given location")
 
     st.write("""### We need some the district,time and date to predict the alarm""")
 
