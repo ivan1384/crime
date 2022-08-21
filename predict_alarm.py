@@ -34,7 +34,4 @@ def show_alarm_page():
     
     ok = st.button("Predict Alarm")
     if ok:
-        date=datetime.strptime(date, %y-%m-%d)
-        Day = date.map(lambda x: x.day)
-        Month = date.map(lambda x: x.month)
-        Year=date.map(lambda x: x.year)
+
