@@ -36,10 +36,5 @@ def show_alarm_page():
     if ok:
         datem = datetime.datetime.strptime(crimed, "%Y-%m-%d")
         st.write(datem)
-        day=datem.datetime.day
-        month=datem.datetime.month 
-        year=datem.datetime.year 
-        st.write(day)
-        st.write(month)
-        st.write(year)
+
 
