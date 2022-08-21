@@ -34,4 +34,4 @@ def show_alarm_page():
     
     ok = st.button("Predict Alarm")
     if ok:
-        st.subheader(value)
+        st.subheader(date)
