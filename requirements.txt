@@ -6,4 +6,4 @@ streamlit==1.8.0
 opencv-python==4.5.4.60
 plotly==5.10.0
 gsheetsdb==0.1.13.1
-sklearn==1.1.2
+sklearn==0.0
