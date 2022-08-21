@@ -30,17 +30,25 @@ def show_alarm_page():
     )
     
     Pdoptions = list(range(len(PdDistrict)))
-    value = st.selectbox("PdDistrict", Pdoptions, format_func=lambda x: PdDistrict[x])
+    Pdvalue = st.selectbox("PdDistrict", Pdoptions, format_func=lambda x: PdDistrict[x])
 
     crimed= st.date_input("When's the crime",datetime.date(2019, 7, 6))
     
     ok = st.button("Predict Alarm")
     if ok:
+        dayofweek=crimed.weekday()
+        st.write(dayofweek)
         scrimed = crimed.strftime('%Y-%m-%d')
         st.write(scrimed)
         dt = parse(scrimed)
-        st.write(dt.year)
-        st.write(dt.month)
-        st.write(dt.day)
+        year=dt.year
+        month=dt.month
+        day=dt.day
         season = (dt.month%12 + 3)//3
-        st.write(season)
+        #X = np.array([[year,month,day,'Monday',1,Pdvalue,season]])
+        
+        
+        
+        
+        
+        
