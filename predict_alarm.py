@@ -28,11 +28,14 @@ def show_alarm_page():
                   'PARK', 
                   'RICHMOND'
     )
-    
+    Hour_zone = ( "12:00AM-5:59AM","6:00AM-11:59AM","12:00PM-5:59PM","6:00PM-11:59PM" 
+            )
     Pdoptions = list(range(len(PdDistrict)))
     Pdvalue = st.selectbox("PdDistrict", Pdoptions, format_func=lambda x: PdDistrict[x])
 
     crimed= st.date_input("When's the crime",datetime.date(2019, 7, 6))
+    hourvalue =st.selectbox("Hour_zone", Pdoptions, format_func=lambda x: Hour_zone[x])
+    
     
     ok = st.button("Predict Alarm")
     if ok:
@@ -45,7 +48,8 @@ def show_alarm_page():
         month=dt.month
         day=dt.day
         season = (dt.month%12 + 3)//3
-        #X = np.array([[year,month,day,'Monday',1,Pdvalue,season]])
+        st.write(hourvalue)
+        #X = np.array([[year,month,day,dayofweek,1,Pdvalue,season]])
         
         
         
