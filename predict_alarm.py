@@ -30,8 +30,6 @@ def show_alarm_page():
     Pdoptions = list(range(len(PdDistrict)))
     value = st.selectbox("PdDistrict", Pdoptions, format_func=lambda x: PdDistrict[x])
 
-
-    district = st.selectbox("Police Districts", PdDistrict)
     
     ok = st.button("Predict Alarm")
     if ok:
