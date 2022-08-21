@@ -51,13 +51,8 @@ def show_alarm_page():
         st.write(hourvalue)
         X = np.array([[year,month,day,dayofweek,hourvalue,Pdvalue,season]])
         alarm=rf.predict(X)
-        
-        if alarm == 0:
-            print("Low Crime at this precinct and time")
-        elif alarm == 1:
-            print("Medium Crime Rate at this precinct and time")
-         elif alarm == 2:
-            print("High Crime at this precinct and time")
+        st.write(alarm)
+
         
         
         
