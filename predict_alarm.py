@@ -42,9 +42,7 @@ def show_alarm_page():
     ok = st.button("Predict Alarm")
     if ok:
         dayofweek=crimed.weekday()
-        st.write(dayofweek)
         scrimed = crimed.strftime('%Y-%m-%d')
-        st.write(scrimed)
         dt = parse(scrimed)
         year=dt.year
         month=dt.month
