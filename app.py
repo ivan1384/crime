@@ -7,7 +7,7 @@ page = st.sidebar.selectbox("Explore Or Hotspot", ("Hotspot", "Classifier","Expl
 
 if page == "Hotspot":
     show_alarm_page()
- if page == "Classifier":
+elif page == "Classifier":
     show_classifier_page()
 else:
     show_explore_page()
