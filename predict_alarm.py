@@ -34,7 +34,7 @@ def show_alarm_page():
 
     ok = st.button("Predict Alarm")
     if ok:
-        date = pd.to_datetime(date, format="%Y-%m-%d")
+        date = pd.to_datetime(date, format="%Y/%m/%d")
         day=date.map(lambda x: x.day)
         month=date.map(lambda x: x.month)
         year=date.map(lambda x: x.year)
