@@ -31,12 +31,13 @@ def show_alarm_page():
     value = st.selectbox("PdDistrict", Pdoptions, format_func=lambda x: PdDistrict[x])
 
     date= st.date_input("When's your birthday",datetime.date(2019, 7, 6))
+
+    ok = st.button("Predict Alarm")
+    if ok:
     date = pd.to_datetime(date, format="%Y-%m-%d")
     day=date.map(lambda x: x.day)
     month=date.map(lambda x: x.month)
     year=date.map(lambda x: x.year)
-    ok = st.button("Predict Alarm")
-    if ok:
         st.subheader(day)
         st.subheader(month)
         st.subheader(year)
