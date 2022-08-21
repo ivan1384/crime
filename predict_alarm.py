@@ -34,6 +34,6 @@ def show_alarm_page():
     
     ok = st.button("Predict Alarm")
     if ok:
-        st.write(crimed)
-
+        scrimed=crimed.strftime('%Y-%m-%d')
+        st.write(scrimed)
 
