@@ -37,6 +37,7 @@ def show_alarm_page():
     if ok:
         scrimed=crimed.strftime('%Y-%m-%d')
         st.write(scrimed)
-        Day,Month,Year = scrimed.str.split("-", expand = True)
-        st.write(Month)
+        day=scrimed.map(lambda x: x.day)
+        month=scrimed.map(lambda x: x.month)
+        year=scrimed.map(lambda x: x.year)
 
