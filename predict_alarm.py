@@ -37,6 +37,6 @@ def show_alarm_page():
     ok = st.button("Predict Alarm")
     if ok:
         datem = datetime.datetime.strptime(crimed, "%Y-%m-%d")
-        dt = parse(datem)
-        st.write(dt.month)
+        
+        st.write(datem.day)
 
