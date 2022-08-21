@@ -39,5 +39,4 @@ def show_alarm_page():
         month=date.map(lambda x: x.month)
         year=date.map(lambda x: x.year)
         st.subheader(day)
-        st.subheader(month)
-        st.subheader(year)
+
