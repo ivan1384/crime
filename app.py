@@ -14,16 +14,16 @@ def show_predict_page():
 
     st.write("""### We need some the district,time and date to predict the alarm""")
 
-    PdDistrict = ('SOUTHERN':0, 
-                  'MISSION':1, 
-                  'NORTHERN':2, 
-                  'CENTRAL':3, 
-                  'BAYVIEW':4, 
-                  'INGLESIDE':5, 
-                  'TENDERLOIN':6, 
-                  'TARAVAL':7, 
-                  'PARK':8, 
-                  'RICHMOND':9
+    PdDistrict = ('SOUTHERN', 
+                  'MISSION', 
+                  'NORTHERN', 
+                  'CENTRAL', 
+                  'BAYVIEW', 
+                  'INGLESIDE', 
+                  'TENDERLOIN', 
+                  'TARAVAL', 
+                  'PARK', 
+                  'RICHMOND'
     )
 
 
