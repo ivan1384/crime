@@ -27,6 +27,7 @@ def show_predict_page():
     )
 
     country = st.selectbox("Police Districts", PdDistrict)
-
+    
+    ok = st.button("Predict Alarm")
     if ok:
         st.subheader(PdDistrict)
