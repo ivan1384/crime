@@ -27,8 +27,8 @@ def show_alarm_page():
                   'RICHMOND'
     )
 
-    country = st.selectbox("Police Districts", PdDistrict)
+    district = st.selectbox("Police Districts", PdDistrict)
     
     ok = st.button("Predict Alarm")
     if ok:
-        st.subheader(PdDistrict)
+        st.subheader(district)
