@@ -1,22 +1,31 @@
-# streamlit_app.py
-
 import streamlit as st
-from gsheetsdb import connect
+import pickle
+import numpy as np
+import pandas as pd
 
-# Create a connection object.
-conn = connect()
 
-# Perform SQL query on the Google Sheet.
-# Uses st.cache to only rerun when the query changes or after 10 min.
-@st.cache(ttl=600)
-def run_query(query):
-    rows = conn.execute(query, headers=1)
-    rows = rows.fetchall()
-    return rows
+pic = pd.read_pickle('https://www.dropbox.com/s/msfjuvuk9satqg9/alarmmodelrandomforest.pkl?dl=1')
 
-sheet_url = st.secrets["https://drive.google.com/file/d/16MUot1fY67wsrIE3lpTUoipBIOMU4oYe/view?usp=sharing"]
-rows = run_query(f'SELECT * FROM "{sheet_url}"')
+rf = pic["model"]
 
-# Print results.
-for row in rows:
-    st.write(f"{row.name} has a :{row.pet}:")
+
+def show_predict_page():
+    st.title("Crime Alarm For Each police District")
+
+    st.write("""### We need some the district,time and date to predict the alarm""")
+
+    PdDistrict = ('SOUTHERN':0, 
+                  'MISSION':1, 
+                  'NORTHERN':2, 
+                  'CENTRAL':3, 
+                  'BAYVIEW':4, 
+                  'INGLESIDE':5, 
+                  'TENDERLOIN':6, 
+                  'TARAVAL':7, 
+                  'PARK':8, 
+                  'RICHMOND':9
+    )
+
+
+    if ok:
+        st.subheader(PdDistrict)
