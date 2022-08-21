@@ -34,6 +34,7 @@ def show_alarm_page():
     Pdvalue = st.selectbox("PdDistrict", Pdoptions, format_func=lambda x: PdDistrict[x])
 
     crimed= st.date_input("When's the crime",datetime.date(2019, 7, 6))
+    houroptions = list(range(len(Hour_zone)))
     hourvalue =st.selectbox("Hour_zone", Pdoptions, format_func=lambda x: Hour_zone[x])
     
     
