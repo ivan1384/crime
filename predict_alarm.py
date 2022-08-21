@@ -10,7 +10,7 @@ pic = pd.read_pickle('https://www.dropbox.com/s/msfjuvuk9satqg9/alarmmodelrandom
 rf = pic["model"]
 
 
-def show_predict_page():
+def show_alarm_page():
     st.title("Crime Alarm For Each police District")
 
     st.write("""### We need some the district,time and date to predict the alarm""")
