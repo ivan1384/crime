@@ -48,10 +48,9 @@ def show_alarm_page():
         month=dt.month
         day=dt.day
         season = (dt.month%12 + 3)//3
-        st.write(hourvalue)
         X = np.array([[year,month,day,dayofweek,hourvalue,Pdvalue,season]])
         alarm=rf.predict(X)
-        st.write(alarm)
+        st.write(alarm[0])
 
         
         
