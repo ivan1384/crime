@@ -35,7 +35,7 @@ def show_alarm_page():
     
     ok = st.button("Predict Alarm")
     if ok:
-        day=crimed.map(lambda x: x.day)
-        month=crimed.map(lambda x: x.month)
-        year=crimed.map(lambda x: x.year)
+        day=crimed.date.day
+        month=crimed.date.day
+        year=crimed.date.day
 
