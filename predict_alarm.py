@@ -42,3 +42,5 @@ def show_alarm_page():
         st.write(dt.year)
         st.write(dt.month)
         st.write(dt.day)
+        season = (dt.month%12 + 3)//3
+        st.write(season)
