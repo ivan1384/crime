@@ -50,8 +50,13 @@ def show_alarm_page():
         season = (dt.month%12 + 3)//3
         X = np.array([[year,month,day,dayofweek,hourvalue,Pdvalue,season]])
         alarm=rf.predict(X)
-        st.write(alarm[0])
-
+        pred=alarm[0]
+        if pred == 0:
+            st.write("Low Crime at this precinct and time")
+        elif pred == 1:
+            st.write("Medium Crime Rate at this precinct and time")
+        elif pred == 2:
+            st.write("High Crime at this precinct and time")
         
         
         
