@@ -15,7 +15,7 @@ def show_explore_page():
       return data
     
     data = load_data()
-    data.columns = ['Dates','Category','Descript','DayOfWeek','PdDistrict','Resolution','Address','X','Y']
+    data =data[['Dates','Category','Descript','DayOfWeek','PdDistrict','Resolution','Address','X','Y']]
     
     st.sidebar.markdown('Type of crimes and their stats')
     select = st.sidebar.selectbox('visualization type',['Histogram','Pie chart'],key=1)
