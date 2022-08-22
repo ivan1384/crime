@@ -46,8 +46,8 @@ def show_classifier_page():
     streetoptions = list(range(len(Street)))
     Streetvalue =st.selectbox("Street Type", streetoptions, format_func=lambda x: Street[x])
     
-    Longitude = st.number_input('Insert a Longitude',max_value=-122.364937,min_value=-122.513642,step=0.0001,format= %.6f)
-    Latitude = st.number_input('Insert a Latitude',max_value=37.8206208380702,min_value=37.7078790224135,step=0.0001,format= %.6f)
+    Longitude = st.number_input('Insert a Longitude',max_value=-122.364937,min_value=-122.513642,step=0.0001,format="%.6f")
+    Latitude = st.number_input('Insert a Latitude',max_value=37.8206208380702,min_value=37.7078790224135,step=0.0001,format="%.6f")
 
     
     df = pd.DataFrame(np.array([[Latitude,Longitude]]),
