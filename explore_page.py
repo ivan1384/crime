@@ -12,6 +12,13 @@ def show_explore_page():
     Latitude = st.number_input('Insert a number',max_value=37.8206208380702,min_value=37.7078790224135)
     st.write('The current number is ', Latitude)
     
+    
+    df = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    columns=['lat', 'lon'])
+
+    st.map(df)
+    
     ok = st.button("Show map")
     if ok:
         cor = np.array([[Latitude,Longitude]])
