@@ -71,7 +71,7 @@ def show_classifier_page():
         season = (dt.month%12 + 3)//3
         
         cor = np.array([[Latitude,Longitude]])
-        coor[:, [0, 1]]=xy_scaler .transform(coor[:, [0, 1]])
+        coor[:, [0, 1]]=xy_scaler.transform(coor[:, [0, 1]])
         xcor=coor[:, [0]]
         ycor=coor[:,[1]]
         xcoordinate=xcor[0,0]
