@@ -12,7 +12,7 @@ import folium
 pic = pd.read_pickle('https://www.dropbox.com/s/msfjuvuk9satqg9/alarmmodelrandomforest.pkl?dl=1')
 
 xgb = pic["model"]
-xy_scaler = data["xy_scaler"]
+xy_scaler = pic["xy_scaler"]
 
 def show_classifier_page():
     st.title("Crime Classifier for most probable property crime or drug user/dealer given location")
