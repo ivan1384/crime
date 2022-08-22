@@ -41,12 +41,19 @@ def show_classifier_page():
     streetoptions = list(range(len(Street)))
     Streetvalue =st.selectbox("Street Type", streetoptions, format_func=lambda x: Street[x])
     
-    m = folium.Map()
-    popup1 = folium.LatLngPopup()
+    Longitude = st.number_input('Insert a number',max_value=-122.364937,min_value=-122.513642)
+    st.write('The current number is ', Longitude)
+    Latitude = st.number_input('Insert a number',max_value=37.8206208380702,min_value=37.7078790224135)
+    st.write('The current number is ', Latitude)
+    
+    
 
-    m.add_child(popup1)
-    m
-    st.write("Latitude of Popup: ", popup1.getLat() )
+    map = st.button("Show map to check if coordinates are correct")
+    if map:
+        cor = np.array([[Latitude,Longitude]])
+        df = pd.DataFrame(np.array([[Latitude,Longitude]]),
+        columns=['lat', 'lon'])
+        st.map(df)
 
     
     
