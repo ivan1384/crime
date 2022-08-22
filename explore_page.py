@@ -11,8 +11,8 @@ def show_explore_page():
     st.write('The current number is ', Longitude)
     Latitude = st.number_input('Insert a number',max_value=37.8206208380702,min_value=37.7078790224135)
     st.write('The current number is ', Latitude)
-    cor = np.array([[Latitude,Longitude]])
-
     
-    
-    st.map(cor)
+    ok = st.button("Show map")
+    if ok:
+        cor = np.array([[Latitude,Longitude]])
+        st.map(cor)
