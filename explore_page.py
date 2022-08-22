@@ -16,4 +16,4 @@ def show_explore_page():
     if ok:
         df=pd.DataFrame(Latitude,Longitude,columns=['lat', 'lon'])
         st.write(df)
-        st.map(df)
+        
