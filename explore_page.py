@@ -13,16 +13,11 @@ def show_explore_page():
     st.write('The current number is ', Latitude)
     
     
-    df = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-    columns=['lat', 'lon'])
 
-    st.map(df)
     
     ok = st.button("Show map")
     if ok:
         cor = np.array([[Latitude,Longitude]])
-        st.write(cor)
-        cor = np.core.records.fromarrays([Latitude,Longitude],names='Latitude,Longitude')
-        st.write(cor)
-        st.map(cor)
+        df = pd.DataFrame(np.array([[Latitude,Longitude]]),
+        columns=['lat', 'lon'])
+        st.map(df)
