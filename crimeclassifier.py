@@ -93,18 +93,9 @@ def show_classifier_page():
         Radius = np.sqrt(xcoordinate ** 2 + ycoordinate ** 2)
         Angle = np.arctan2(xcoordinate, ycoordinate)
 
-        st.write(Rot30_X)
-        st.write(Rot30_Y)
-        st.write(Rot45_X)
-        st.write(Rot45_Y)
-        st.write(Rot60_X)
-        st.write(Rot60_Y)
-        st.write(Radius)
-        st.write(Angle)
         
-        # x input should follow this DayOfWeek	PdDistrict	X	Y	Month	Day	Year	Hour	StreetType	BlockNo	Rot30_X	Rot30_Y	Rot45_X	Rot45_Y	Rot60_X	Rot60_Y	Radius	Angle
-        #X = np.array([[dayofweek,Pdvalue,xcor,ycor,hourvalue,month,day,year,Hours,,,,,,,]])
-
-        
+        # 	X	Y	Month	Day	Year	Hour	StreetType	BlockNo	Rot30_X	Rot30_Y	Rot45_X	Rot45_Y	Rot60_X	Rot60_Y	Radius	Angle
+        X = np.array([[dayofweek,Pdvalue,xcoordinate,ycoordinate,month,day,year,hourvalue,season,Streetvalue,blockvalue,Rot30_X,Rot30_Y,Rot45_X,Rot45_Y,Rot60_X,Rot60_Y,Radius,Angle]])
+        y_pred=xgb.predict(X)
         
         
