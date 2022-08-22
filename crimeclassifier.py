@@ -55,11 +55,6 @@ def show_classifier_page():
     columns=['lat', 'lon'])
     st.map(df)
 
-    map = st.button("Show map to check if coordinates are correct")
-    if map:
-        df = pd.DataFrame(np.array([[Latitude,Longitude]]),
-        columns=['lat', 'lon'])
-        st.map(df)
 
     
     
