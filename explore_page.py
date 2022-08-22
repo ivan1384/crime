@@ -18,3 +18,4 @@ def show_explore_page():
         st.write(cor)
         cor = np.core.records.fromarrays([Latitude,Longitude],names='Latitude,Longitude')
         st.write(cor)
+        st.map(cor)
