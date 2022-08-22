@@ -11,8 +11,8 @@ import folium
 
 pic = pd.read_pickle('https://www.dropbox.com/s/msfjuvuk9satqg9/alarmmodelrandomforest.pkl?dl=1')
 
-rf = pic["model"]
-
+xgb = pic["model"]
+xy_scaler = data["xy_scaler"]
 
 def show_classifier_page():
     st.title("Crime Classifier for most probable property crime or drug user/dealer given location")
@@ -50,7 +50,6 @@ def show_classifier_page():
 
     map = st.button("Show map to check if coordinates are correct")
     if map:
-        cor = np.array([[Latitude,Longitude]])
         df = pd.DataFrame(np.array([[Latitude,Longitude]]),
         columns=['lat', 'lon'])
         st.map(df)
@@ -68,6 +67,13 @@ def show_classifier_page():
         month=dt.month
         day=dt.day
         season = (dt.month%12 + 3)//3
+        
+        cor = np.array([[Latitude,Longitude]])
+        df = pd.DataFrame(np.array([[Latitude,Longitude]]),columns=['lat', 'lon'])
+        X,Y=xy_scaler.transform(X,Y)
+        st.write(X)
+        
+        
         # x input should follow this DayOfWeek	PdDistrict	X	Y	Month	Day	Year	Hour	StreetType	BlockNo	Rot30_X	Rot30_Y	Rot45_X	Rot45_Y	Rot60_X	Rot60_Y	Radius	Angle
         #X = np.array([[dayofweek,Pdvalue,xcor,ycor,hourvalue,month,day,year,Hours,,,,,,,]])
 
