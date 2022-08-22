@@ -9,6 +9,7 @@ import string as str
 from dateutil.parser import parse
 import folium
 import joblib
+import math
 
 pic = pd.read_pickle('https://www.dropbox.com/s/msfjuvuk9satqg9/alarmmodelrandomforest.pkl?dl=1')
 
@@ -76,9 +77,30 @@ def show_classifier_page():
         ycor=coor[:,[1]]
         xcoordinate=xcor[0,0]
         ycoordinate=ycor[0,0]
-        st.write(xcoordinate)
-        st.write(ycoordinate)
-        
+        cos_30 = math.cos(math.radians(30))
+        sin_30 = math.sin(math.radians(30))
+        cos_45 = math.cos(math.radians(45))
+        sin_45 = math.sin(math.radians(45))
+        cos_60 = math.cos(math.radians(60))
+        sin_60 = math.sin(math.radians(60))
+
+        Rot30_X = xcoordinate * cos_30 - ycoordinate * sin_30 
+        Rot30_Y = xcoordinate * sin_30 + ycoordinate * cos_30
+        Rot45_X = xcoordinate * cos_45 - ycoordinate * sin_45  
+        Rot45_Y = xcoordinate * sin_45 + ycoordinate * cos_45
+        Rot60_X = xcoordinate * cos_60 - ycoordinate * sin_60  
+        Rot60_Y = xcoordinate * sin_60 + ycoordinate * cos_60
+        Radius = np.sqrt(xcoordinate ** 2 + ycoordinate ** 2)
+        Angle = np.arctan2(xcoordinate, ycoordinate)
+
+        st.write(Rot30_X)
+        st.write(Rot30_Y)
+        st.write(Rot45_X)
+        st.write(Rot45_Y)
+        st.write(Rot60_X)
+        st.write(Rot60_Y)
+        st.write(Radius)
+        st.write(Angle)
         
         # x input should follow this DayOfWeek	PdDistrict	X	Y	Month	Day	Year	Hour	StreetType	BlockNo	Rot30_X	Rot30_Y	Rot45_X	Rot45_Y	Rot60_X	Rot60_Y	Radius	Angle
         #X = np.array([[dayofweek,Pdvalue,xcor,ycor,hourvalue,month,day,year,Hours,,,,,,,]])
