@@ -71,9 +71,13 @@ def show_classifier_page():
         season = (dt.month%12 + 3)//3
         
         cor = np.array([[Latitude,Longitude]])
-        df = pd.DataFrame(np.array([[Latitude,Longitude]]),columns=['lat', 'lon'])
-        X,Y=xy_scaler.transform(X,Y)
-        st.write(X)
+        coor[:, [0, 1]]=scalertry.transform(coor[:, [0, 1]])
+        xcor=coor[:, [0]]
+        ycor=coor[:,[1]]
+        xcoordinate=xcor[0,0]
+        ycoordinate=ycor[0,0]
+        st.write(xcoordinate)
+        st.write(ycoordinate)
         
         
         # x input should follow this DayOfWeek	PdDistrict	X	Y	Month	Day	Year	Hour	StreetType	BlockNo	Rot30_X	Rot30_Y	Rot45_X	Rot45_Y	Rot60_X	Rot60_Y	Radius	Angle
