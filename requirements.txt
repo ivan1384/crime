@@ -8,5 +8,5 @@ plotly==5.10.0
 gsheetsdb==0.1.13.1
 sklearn==0.0
 pip>=22.1.1
-
+leafmap
 folium==0.12.1 
