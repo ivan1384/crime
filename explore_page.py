@@ -15,4 +15,5 @@ def show_explore_page():
     ok = st.button("Show map")
     if ok:
         cor = np.array([[Latitude,Longitude]])
-        st.map(cor)
+        st.write(cor)
+        #st.map(cor)
