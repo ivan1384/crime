@@ -14,6 +14,6 @@ def show_explore_page():
     
     ok = st.button("Show map")
     if ok:
-        pd.DataFrame(Latitude,Longitude,columns=['lat', 'lon'])
-        st.write(cor)
-        st.map(cor)
+        df=pd.DataFrame(Latitude,Longitude,columns=['lat', 'lon'])
+        st.write(df)
+        st.map(df)
