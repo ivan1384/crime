@@ -59,7 +59,7 @@ def show_classifier_page():
     
     
     
-    ok = st.button("Predict Alarm")
+    ok = st.button("Predict Crime Type")
     if ok:
         dayofweek=crimed.weekday()
         scrimed = crimed.strftime('%Y-%m-%d')
