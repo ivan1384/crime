@@ -11,7 +11,7 @@ import folium
 import joblib
 import math
 
-pic = pd.read_pickle('https://www.dropbox.com/s/msfjuvuk9satqg9/alarmmodelrandomforest.pkl?dl=1')
+pic = pd.read_pickle('https://www.dropbox.com/s/5sqt4o3x329j6m3/xgboostforcrimeclassification.pkl?dl=1')
 
 xgb = pic["model"]
 xy_scaler = joblib.load("xy_scaler.save") 
