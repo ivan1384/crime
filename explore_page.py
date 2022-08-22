@@ -16,6 +16,7 @@ def show_explore_page():
     
     data = load_data()
     data =data[['Dates','Category','Descript','DayOfWeek','PdDistrict','Resolution','Address','X','Y']]
+    data.columns = ['Dates','Category','Descript','DayOfWeek','PdDistrict','Resolution','Address','longitude','latitude']
     
     st.sidebar.markdown('Type of crimes and their stats')
     select = st.sidebar.selectbox('visualization type',['Histogram','Pie chart'],key=1)
@@ -37,7 +38,7 @@ def show_explore_page():
     mod_dat = data[data['Dates'].dt.hour == hour]
     mod_dat = mod_dat[data['Dates'].dt.year == year]
     mod_dat = mod_dat[data['Dates'].dt.month == day]
-    if not st.sidebar.checkbox("close",True,key='2'):
+    if not st.sidebar.checkbox("close",True,key='1'):
         st.markdown("Crime location based on time")
         st.markdown("%i crime between %i:00 and %i:00 in the Month of %i" % (len(mod_dat),hour,hour+1%24,day))
         st.map(mod_dat)
