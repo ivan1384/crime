@@ -70,7 +70,7 @@ def show_classifier_page():
         day=dt.day
         season = (dt.month%12 + 3)//3
         
-        cor = np.array([[Latitude,Longitude]])
+        coor = np.array([[Latitude,Longitude]])
         coor[:, [0, 1]]=xy_scaler.transform(coor[:, [0, 1]])
         xcor=coor[:, [0]]
         ycor=coor[:,[1]]
