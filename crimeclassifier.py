@@ -29,7 +29,7 @@ def show_classifier_page():
     Pdoptions = list(range(len(PdDistrict)))
     Pdvalue = st.selectbox("PdDistrict", Pdoptions, format_func=lambda x: PdDistrict[x])
     
-    crimed= st.date_input("When's the crime",datetime.date(2019, 7, 6))
+    crimed= st.date_input("When's the crime",datetime.date(2018, 5, 15),max_value=datetime.date(2019, 12, 31),min_value=datetime.date(2004, 1, 1))
     
     Hour = ( 0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 , 12 ,13 ,14 ,15 ,16 ,17 ,18 ,19 ,20 ,21 ,22 ,23 )
     Hours = st.selectbox("Hour of the day", Hour)
