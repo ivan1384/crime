@@ -8,8 +8,7 @@ import folium
 
 
 def show_explore_page():
-    m = fl.Map()
-
-    m.add_child(fl.LatLngPopup())
-
-    map = st_folium(m, height=350, width=700)
+    Longitude = st.number_input('Insert a number',max_value=-122.364937,min_value=-122.513642)
+    st.write('The current number is ', Longitude)
+    Latitude = st.number_input('Insert a number',max_value=37.819975,min_value=37.707879)
+    st.write('The current number is ', Latitude)
