@@ -95,7 +95,7 @@ def show_classifier_page():
 
         
         # 	X	Y	Month	Day	Year	Hour	StreetType	BlockNo	Rot30_X	Rot30_Y	Rot45_X	Rot45_Y	Rot60_X	Rot60_Y	Radius	Angle
-        X = np.array([[dayofweek,Pdvalue,xcoordinate,ycoordinate,month,day,year,hourvalue,season,Streetvalue,blockvalue,Rot30_X,Rot30_Y,Rot45_X,Rot45_Y,Rot60_X,Rot60_Y,Radius,Angle]])
+        X = np.array([[dayofweek,Pdvalue,xcoordinate,ycoordinate,month,day,year,Hours,season,Streetvalue,blockvalue,Rot30_X,Rot30_Y,Rot45_X,Rot45_Y,Rot60_X,Rot60_Y,Radius,Angle]])
         y_pred=xgb.predict(X)
         
         
