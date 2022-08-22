@@ -10,6 +10,8 @@ from dateutil.parser import parse
 import folium
 import joblib
 import math
+import xgboost as xgb
+from xgboost import XGBClassifier
 
 pic = pd.read_pickle('https://www.dropbox.com/s/5sqt4o3x329j6m3/xgboostforcrimeclassification.pkl?dl=1')
 
