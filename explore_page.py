@@ -7,4 +7,4 @@ import numpy as np
 
 
 def show_explore_page():
-  st.write("Exploring San Francisco crime scene")
+    st.write("Exploring San Francisco crime scene")
