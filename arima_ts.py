@@ -6,8 +6,8 @@ def show_arima_page():
   st.header("Arima output ")
   
   
-  HtmlFile = open("prediction_assault.html", 'r', encoding='utf-8',height = 600)
-  source_code = HtmlFile.read() 
+  HtmlFile = open("prediction_assault.html", 'r', encoding='utf-8')
+  source_code = HtmlFile.read(height = 600) 
   print(source_code)
   components.html(source_code)
   
