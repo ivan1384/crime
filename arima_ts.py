@@ -14,6 +14,5 @@ def show_arima_page():
   st.subheader("Predicted Theft cases ")
   HtmlFile2 = open("prediction_theft.html", 'r', encoding='utf-8')
   source_code2 = HtmlFile2.read() 
-  print(source_code)
   components.html(source_code2,height = 600)
   
