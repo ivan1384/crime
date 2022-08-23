@@ -18,10 +18,10 @@ def show_arima_page():
   
   st.subheader("Predicted Assault cases ")
   HtmlFile3 = open("prediction_Assault.html", 'r', encoding='utf-8')
-  source_code3 = HtmlFile2.read() 
-  components.html(source_code2,height = 600)
+  source_code3 = HtmlFile3.read() 
+  components.html(source_code3,height = 600)
   
   st.subheader("Predicted Vehicle Theft cases ")
   HtmlFile4 = open("prediction_Vehicle.html", 'r', encoding='utf-8')
-  source_code4 = HtmlFile2.read() 
-  components.html(source_code2,height = 600)
+  source_code4 = HtmlFile4.read() 
+  components.html(source_code4,height = 600)
