@@ -23,14 +23,13 @@ def show_explore_page():
     select = st.sidebar.selectbox('visualization type',['Histogram','Pie chart'])
     crime_count = data['Category'].value_counts()
     crime_count = pd.DataFrame({'Crime':crime_count.index, 'Numbers': crime_count.values})
-    if not st.sidebar.checkbox("Hide",True):
-        st.markdown("Rate of crime as per type")
-        if select == "Histogram":
-            fig = px.bar(crime_count,x="Crime",y="Numbers",color="Numbers",height =600,width=900)
-            st.plotly_chart(fig)
-        else:
-            fig = px.pie(crime_count,values="Numbers",names="Crime")
-            st.plotly_chart(fig)
+    st.markdown("Rate of crime as per type")
+    if select == "Histogram":
+        fig = px.bar(crime_count,x="Crime",y="Numbers",color="Numbers",height =600,width=900)
+        st.plotly_chart(fig)
+    else:
+        fig = px.pie(crime_count,values="Numbers",names="Crime")
+        st.plotly_chart(fig)
     
     st.sidebar.subheader("crime based on the time of day")
     hour = st.sidebar.slider("Hours of day",0,23)
