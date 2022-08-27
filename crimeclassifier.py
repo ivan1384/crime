@@ -102,4 +102,5 @@ def show_classifier_page():
             st.write("The most likely crime here is VEHICLE THEFT")
         elif pred == 2:
             st.write("The most likely crime here is DRUG/NARCOTIC")
-        
+        elif pred == 3:
+            st.write("The most likely crime here is VANDALISM")
