@@ -52,11 +52,11 @@ def show_alarm_page():
         alarm=rf.predict(X)
         pred=alarm[0]
         if pred == 0:
-            st.write("Low Crime at this precinct and time")
+            st.write("Low Crime at this precinct and time (Predicted less than 3 occurences of crimes)")
         elif pred == 1:
-            st.write("Medium Crime Rate at this precinct and time")
+            st.write("Medium Crime Rate at this precinct and time(Predicted less than 10 occurences of crimes but more than 3 occurences of crime )")
         elif pred == 2:
-            st.write("High Crime at this precinct and time")
+            st.write("High Crime at this precinct and time(Predicted more than 10 occurences of crimes)")
         
         
         
