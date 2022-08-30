@@ -7,9 +7,9 @@ import datetime
 import string as str
 from dateutil.parser import parse
 
-pic = pd.read_pickle('https://www.dropbox.com/s/msfjuvuk9satqg9/alarmmodelrandomforest.pkl?dl=1')
+pic = pd.read_pickle('https://www.dropbox.com/s/642r89udaoedcz7/alarmmodelxgboost.pkl?dl=1')
 
-rf = pic["model"]
+xgb = pic["model"]
 
 
 def show_alarm_page():
@@ -49,7 +49,7 @@ def show_alarm_page():
         day=dt.day
         season = (dt.month%12 + 3)//3
         X = np.array([[year,month,day,dayofweek,hourvalue,Pdvalue,season]])
-        alarm=rf.predict(X)
+        alarm=xgb.predict(X)
         pred=alarm[0]
         if pred == 0:
             st.write("Low Crime at this precinct and time (Predicted less than 3 occurences of crimes)")
