@@ -39,7 +39,7 @@ def show_classifier_page():
                4800 ,4900 ,5000 ,5100 ,5200 ,5300 ,5400 ,5500 ,5600 ,5700 ,5800 ,5900 ,6000 ,6100 ,6200 ,6300 ,6400 ,6500 ,6600 ,6700 ,6800 ,6900 ,7000 ,
                7100 ,7200 ,7300 ,7400 ,7500 ,7600 ,7700 ,7800 ,7900 ,8000 ,8100 ,8200 ,8300 ,8400)
     blockoptions = list(range(len(Blockno)))
-    blockvalue =st.selectbox("Block No", blockoptions, format_func=lambda x: Blockno[x])
+    blockvalue =st.selectbox("Block No *Leave as 0 if none", blockoptions, format_func=lambda x: Blockno[x])
     
     Street=('AL', 'AV', 'BL', 'CR', 'CT', 'DR', 'EL CAMINO DEL MAR', 'HY', 'I-80', 
             'INT', 'LN', 'OTHER', 'PL', 'PZ', 'RD', 'ST', 'TR', 'WAY', 'WK', 'WY')
