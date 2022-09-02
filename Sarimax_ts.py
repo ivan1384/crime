@@ -3,9 +3,9 @@ import streamlit.components.v1 as components
 
 
 def show_arima_page():
-  st.header("Arima output ")
+  st.header("SARIMAX output ")
   
-  st.subheader("Predicted cases for top 10 crimes")
+  st.subheader("Predicted cases for top 4 crimes")
   HtmlFile = open("prediction_top10 crimes.html", 'r', encoding='utf-8')
   source_code = HtmlFile.read() 
   print(source_code)
