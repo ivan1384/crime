@@ -35,7 +35,6 @@ def show_explore_page():
     hour = st.sidebar.slider("Hours of day",0,23)
     year = st.sidebar.slider("Year",2003,2018)
     month = st.sidebar.slider("Month",1,12)
-    day = st.sidebar.slider("day",1,31)
     mod_dat = data[data['Dates'].dt.hour == hour]
     mod_dat = mod_dat[data['Dates'].dt.year == year]
     mod_dat = mod_dat[data['Dates'].dt.month == month]
