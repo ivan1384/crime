@@ -38,6 +38,7 @@ def show_explore_page():
     day = st.sidebar.slider("day",1,31)
     mod_dat = data[data['Dates'].dt.hour == hour]
     mod_dat = mod_dat[data['Dates'].dt.year == year]
+    mod_dat = mod_dat[data['Dates'].dt.month == month]
     mod_dat = mod_dat[data['Dates'].dt.day == day]
     if not st.sidebar.checkbox("Don't show map",False):
         st.markdown("Crime location based on time")
