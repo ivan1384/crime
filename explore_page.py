@@ -31,7 +31,8 @@ def show_explore_page():
         fig = px.pie(crime_count,values="Numbers",names="Crime")
         st.plotly_chart(fig)
     
-    st.sidebar.subheader("crime based on the time of day")
+    
+    st.sidebar.subheader("Crime based on the time of day")
     hour = st.sidebar.slider("Hours of day",0,23)
     year = st.sidebar.slider("Year",2003,2018)
     month = st.sidebar.slider("Month",1,12)
