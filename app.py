@@ -4,7 +4,7 @@ from explore_page import show_explore_page
 from crimeclassifier import show_classifier_page
 from Sarimax_ts import show_arima_page
 
-page = st.sidebar.selectbox("Explore Or Hotspot", ("Hotspot", "Classifier","Arima","Explore"))
+page = st.sidebar.selectbox("Explore Or Hotspot", ("Hotspot", "Classifier","Sarimax","Explore"))
 
 if page == "Hotspot":
     show_alarm_page()
