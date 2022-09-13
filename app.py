@@ -10,7 +10,7 @@ if page == "Hotspot":
     show_alarm_page()
 elif page == "Classifier":
     show_classifier_page()
-elif page == "Arima":
+elif page == "Sarimax":
     show_arima_page()
 else:
     show_explore_page()
